@@ -1,0 +1,7 @@
+.DS_Store
+.DS_Store?
+Brewfile.lock.json
+.home.zsh.bckp*
+.home.zshrc.bckp.*
+.zcompdump*
+.zsh_history
