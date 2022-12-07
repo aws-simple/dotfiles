@@ -16,7 +16,6 @@ brew 'checkov'              # Prevent cloud misconfigurations during build-time 
 brew 'cloud-nuke'           # CLI tool to nuke (delete) cloud resources
 brew 'coreutils'            # Those that come with macOS are outdated
 brew 'defaultbrowser'       # Command-line tool for getting & setting the default browser
-brew 'k9s'                  # Kubernetes CLI To Manage Your Clusters In Style!
 brew 'direnv'               # Load/unload environment variables based on $PWD
 brew 'ffmpeg'               # Play, record, convert, and stream audio and video
 brew 'gh'                   # GitHub command-line tool
@@ -25,8 +24,10 @@ brew 'goenv'                # Go version management
 brew 'graphviz'             # Graph visualization software from AT&T and Bell Labs
 brew 'grep'                 # GNU grep, egrep and fgre
 brew 'helm'                 # Kubernetes package manager, also known as: helm@3
+brew 'htop'                 # Improved top
 brew 'httpie'               # User-friendly cURL replacement (command-line HTTP client)
 brew 'jq'                   # Used for spatie/visit
+brew 'k9s'                  # Kubernetes CLI To Manage Your Clusters In Style!
 brew 'kube-linter'          # Static analysis tool for Kubernetes YAML files and Helm charts
 brew 'kube-ps1'             # Kubernetes prompt info for bash and zsh
 brew 'kubectl'              # Kubernetes command-line interface, also known as: kubectl@1.22
@@ -43,6 +44,7 @@ brew 'nmap'                 # Port scanning utility for large networks
 brew 'pipenv'               # Python dependency management tool
 brew 'pkg-config'           # Manage compile and link flags for libraries, also known as: pkgconfig
 brew 'pre-commit'           # Framework for managing multi-language pre-commit hooks
+brew 'pstree'               # Show ps output as a tree
 brew 'svn'                  # Also known as: subversion@1.14, svn, version control system designed to be a better CVS Needed to install fonts
 brew 'terraform-docs'       # Tool to generate documentation from Terraform modules
 brew 'terragrunt'           # Thin wrapper for Terraform e.g. for locking state
