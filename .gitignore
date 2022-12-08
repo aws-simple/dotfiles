@@ -5,3 +5,4 @@ Brewfile.lock.json
 .home.zshrc.bckp.*
 .zcompdump*
 .zsh_history
+.krew_install.log
