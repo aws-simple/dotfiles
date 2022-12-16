@@ -41,6 +41,7 @@ brew 'make'                 # Utility for directing compilation
 brew 'mas'                  # Mac App Store manager
 brew 'netcat'               # Utility for managing network connections
 brew 'nmap'                 # Port scanning utility for large networks
+brew 'oath-toolkit'         # Tools for one-time password authentication systems
 brew 'pipenv'               # Python dependency management tool
 brew 'pkg-config'           # Manage compile and link flags for libraries, also known as: pkgconfig
 brew 'pre-commit'           # Framework for managing multi-language pre-commit hooks
