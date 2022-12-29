@@ -102,6 +102,7 @@ cask 'tuple'
 cask 'virtualbox'
 cask 'visual-studio-code'
 cask 'vnc-viewer'
+cask 'webstorm'
 cask 'zoom'
 
 ### ###cask 'figma'
