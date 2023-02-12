@@ -15,6 +15,7 @@ brew 'bat'                  # Used for spatie/visit
 brew 'checkov'              # Prevent cloud misconfigurations during build-time for IaC tools
 brew 'cloud-nuke'           # CLI tool to nuke (delete) cloud resources
 brew 'coreutils'            # Those that come with macOS are outdated
+brew 'curl'                 # Get a file from an HTTP, HTTPS or FTP server
 brew 'defaultbrowser'       # Command-line tool for getting & setting the default browser
 brew 'direnv'               # Load/unload environment variables based on $PWD
 brew 'ffmpeg'               # Play, record, convert, and stream audio and video
