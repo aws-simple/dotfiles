@@ -46,6 +46,7 @@ brew 'pipenv'               # Python dependency management tool
 brew 'pkg-config'           # Manage compile and link flags for libraries, also known as: pkgconfig
 brew 'pre-commit'           # Framework for managing multi-language pre-commit hooks
 brew 'pstree'               # Show ps output as a tree
+brew 'gnu-sed'              # GNU "sed": to use it add this to your .rc file: PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 brew 'sponge'               # Soak up standard input and write to a file
 brew 'svn'                  # Also known as: subversion@1.14, svn, version control system designed to be a better CVS Needed to install fonts
 brew 'terraform-docs'       # Tool to generate documentation from Terraform modules

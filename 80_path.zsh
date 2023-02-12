@@ -10,3 +10,8 @@ fi
 # I've disabled this for now because I only use "ls" which is
 # referenced in my aliases.zsh file directly.
 #export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+# gnu sed
+if [[ -x "/usr/local/opt/gnu-sed/libexec/gnubin/sed" ]]; then
+  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+fi
