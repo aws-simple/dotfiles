@@ -20,6 +20,7 @@ brew 'direnv'               # Load/unload environment variables based on $PWD
 brew 'ffmpeg'               # Play, record, convert, and stream audio and video
 brew 'gh'                   # GitHub command-line tool
 brew 'git'                  # Git - Distributed revision control system
+brew 'gnu-sed'              # GNU "sed": to use it add this to your .rc file: PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 brew 'goenv'                # Go version management
 brew 'graphviz'             # Graph visualization software from AT&T and Bell Labs
 brew 'grep'                 # GNU grep, egrep and fgre
@@ -45,8 +46,8 @@ brew 'oath-toolkit'         # Tools for one-time password authentication systems
 brew 'pipenv'               # Python dependency management tool
 brew 'pkg-config'           # Manage compile and link flags for libraries, also known as: pkgconfig
 brew 'pre-commit'           # Framework for managing multi-language pre-commit hooks
+brew 'proxychains-ng'       # Hook preloader
 brew 'pstree'               # Show ps output as a tree
-brew 'gnu-sed'              # GNU "sed": to use it add this to your .rc file: PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 brew 'sponge'               # Soak up standard input and write to a file
 brew 'svn'                  # Also known as: subversion@1.14, svn, version control system designed to be a better CVS Needed to install fonts
 brew 'terraform-docs'       # Tool to generate documentation from Terraform modules
