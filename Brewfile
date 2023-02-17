@@ -41,6 +41,7 @@ brew 'kustomize'            # Template-free customization of Kubernetes YAML man
 brew 'mackup'               # Keep your Mac's application settings in sync
 brew 'make'                 # Utility for directing compilation
 brew 'mas'                  # Mac App Store manager
+brew 'meld'                 # Visual diff and merge tool
 brew 'netcat'               # Utility for managing network connections
 brew 'nmap'                 # Port scanning utility for large networks
 brew 'oath-toolkit'         # Tools for one-time password authentication systems
