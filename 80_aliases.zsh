@@ -1,6 +1,30 @@
 # K8s
 alias k='kubectl'
 
+alias kubeall='f_kubeall() {
+    local all=""
+    local message="No resources found";
+    if [[ -n $1 ]] && [[ $1 == "-A" ]]; then
+        all=" -A"
+    else
+        local ns=$(/usr/local/bin/kubectl config view --minify | grep namespace: | cut -d" " -f6);
+        message="No resources found in $ns namespace.";
+        printf "NAMESPACE: $ns\n";
+    fi;
+    local tmpfile=$(mktemp);
+    /usr/local/bin/kubectl api-resources --namespaced=true --no-headers | awk "{print \$1}" | sort | uniq | while read i; do
+        /usr/local/bin/kubectl get $all $i > $tmpfile 2>&1;
+        if test $? -eq 0 -a "$(cat $tmpfile)" != "$message"; then
+            printf "====== \e[1;34m%30s\e[m ======\n" $i;
+            cat $tmpfile;
+        fi;
+    done;
+    rm -fr $tmpfile
+} ; f_kubeall'
+
+alias kx='f() { [ "$1" ] && kubectl config use-context $1 || kubectl config current-context ; } ; f'
+
+
 # Krew plugin aliases
 if [[ -x "$HOME/.krew/bin/kubectl-krew" ]]; then
   alias kn='kubectl ns'
