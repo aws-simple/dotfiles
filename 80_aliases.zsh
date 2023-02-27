@@ -1,29 +1,6 @@
-# K8s
+### K8s and Containers
 alias k='kubectl'
-
-alias kubeall='f_kubeall() {
-    local all=""
-    local message="No resources found";
-    if [[ -n $1 ]] && [[ $1 == "-A" ]]; then
-        all=" -A"
-    else
-        local ns=$(/usr/local/bin/kubectl config view --minify | grep namespace: | cut -d" " -f6);
-        message="No resources found in $ns namespace.";
-        printf "NAMESPACE: $ns\n";
-    fi;
-    local tmpfile=$(mktemp);
-    /usr/local/bin/kubectl api-resources --namespaced=true --no-headers | awk "{print \$1}" | sort | uniq | while read i; do
-        /usr/local/bin/kubectl get $all $i > $tmpfile 2>&1;
-        if test $? -eq 0 -a "$(cat $tmpfile)" != "$message"; then
-            printf "====== \e[1;34m%30s\e[m ======\n" $i;
-            cat $tmpfile;
-        fi;
-    done;
-    rm -fr $tmpfile
-} ; f_kubeall'
-
-alias kx='f() { [ "$1" ] && kubectl config use-context $1 || kubectl config current-context ; } ; f'
-
+alias d='docker'
 
 # Krew plugin aliases
 if [[ -x "$HOME/.krew/bin/kubectl-krew" ]]; then
@@ -31,7 +8,8 @@ if [[ -x "$HOME/.krew/bin/kubectl-krew" ]]; then
   alias kx='kubectl ctx'
 fi
 
-# Shortcuts
+### Misc
+alias envg='f_envg() { if [[ -n $1 ]] ; then env | grep -i $1 ; else env | sort ; fi ; } ; f_envg'
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="source $HOME/.zsh/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
