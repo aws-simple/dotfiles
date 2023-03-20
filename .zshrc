@@ -10,7 +10,8 @@ export MNML_PROMPT=(mnml_git mnml_keymap)
 export MNML_RPROMPT=('mnml_cwd 20')
 
 # Set name of the theme to load
-ZSH_THEME="minimal"
+#ZSH_THEME="minimal"
+ZSH_THEME="simple"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
