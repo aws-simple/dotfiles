@@ -6,3 +6,4 @@ Brewfile.lock.json
 .zcompdump*
 .zsh_history
 .krew_install.log
+.zsh_sessions/
