@@ -9,7 +9,7 @@ if [[ -x "$HOME/.krew/bin/kubectl-krew" ]]; then
 fi
 
 ### Misc
-alias envg='f_envg() { if [[ -n $1 ]] ; then env | grep -i $1 ; else env | sort ; fi ; } ; f_envg'
+alias eg='f_eg() { if [[ -n $1 ]] ; then env | grep -i $1 ; else env | sort ; fi ; } ; f_eg'
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="source $HOME/.zsh/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
