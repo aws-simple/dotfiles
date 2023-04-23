@@ -1,9 +1,9 @@
 # kubeall: all k8s objects namespaced in current namespace (or in all namespaces if invoked with '-A' key)
 function kubeall {
-  local kubeget="kubectl get"
   local message="No resources found"
+  local all="false"
   if [[ -n $1 ]] && [[ $1 == "-A" ]] ; then
-    kubeget="kubectl get -A"
+    all="true"
   else
     local ns=$(kubectl config view --minify | grep namespace: | cut -d" " -f6)
     message="No resources found in $ns namespace."
@@ -13,7 +13,7 @@ function kubeall {
   local tmpfile=$(mktemp)
   kubectl api-resources --namespaced=true --no-headers | awk "{print \$1}" | sort | uniq | \
     while read i ; do
-      $kubeget $i > $tmpfile 2>&1
+      kubectl get $(test "$all" != "true" || echo "-A") $i > $tmpfile 2>&1
       if test $? -eq 0 -a "$(cat $tmpfile)" != "$message" ; then
         printf "====== \e[1;34m%30s\e[m ======\n" $i
         cat $tmpfile
