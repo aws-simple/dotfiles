@@ -14,6 +14,7 @@ alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="source $HOME/.zsh/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
+alias lt="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFotr --color"
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 
