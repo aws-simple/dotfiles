@@ -1,9 +1,9 @@
 .DS_Store
 .DS_Store?
 Brewfile.lock.json
-.home.zsh.bckp*
-.home.zshrc.bckp.*
+.bckp/
 .zcompdump*
+.zsh_sessions/
 .zsh_history
 .krew_install.log
-.zsh_sessions/
+ohmyzsh/

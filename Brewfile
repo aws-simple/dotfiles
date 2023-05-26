@@ -41,7 +41,6 @@ brew 'kustomize'            # Template-free customization of Kubernetes YAML man
 brew 'mackup'               # Keep your Mac's application settings in sync
 brew 'make'                 # Utility for directing compilation
 brew 'mas'                  # Mac App Store manager
-brew 'meld'                 # Visual diff and merge tool
 brew 'netcat'               # Utility for managing network connections
 brew 'nmap'                 # Port scanning utility for large networks
 brew 'oath-toolkit'         # Tools for one-time password authentication systems
@@ -56,6 +55,7 @@ brew 'terraform-docs'       # Tool to generate documentation from Terraform modu
 brew 'terragrunt'           # Thin wrapper for Terraform e.g. for locking state
 brew 'tfenv'                # Terraform version manager inspired by rbenv
 brew 'tflint'               # Linter for Terraform files
+brew "tinyproxy"            # HTTP/HTTPS proxy for POSIX systems
 brew 'yq'                   # Also known as: yq@4, process YAML documents from the CLI
 
 # Spatie Medialibrary
@@ -68,7 +68,6 @@ brew 'gifsicle'  # GIF image/animation creator/editor
 # Development PHP
 brew 'php'
 brew 'php@8.0'
-brew 'php@7.4'
 brew 'composer'
 brew 'imagemagick'
 brew 'node'
@@ -92,6 +91,7 @@ cask 'insomnia'
 cask 'intellij-idea-ce'
 cask 'iterm2'
 cask 'keybase'
+cask 'meld'                     # Visual diff and merge tool
 cask 'microsoft-remote-desktop'
 cask 'pastebot'
 cask 'peakhour'

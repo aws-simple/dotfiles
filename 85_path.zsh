@@ -1,15 +1,12 @@
-# Load dotfiles binaries
-export PATH="$DOTFILES/bin:$PATH"
+# dotfiles binaries
+if [[ -d "$ZDOTDIR/bin" ]]; then
+  export PATH="$ZDOTDIR/bin:$PATH"
+fi
 
-# Krew plugin
+# krew plugin
 if [[ -x "$HOME/.krew/bin/kubectl-krew" ]]; then
   export PATH="$HOME/.krew/bin:$PATH"
 fi
-
-# Make sure coreutils are loaded before system commands
-# I've disabled this for now because I only use "ls" which is
-# referenced in my aliases.zsh file directly.
-#export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 # gnu sed
 if [[ -x "/usr/local/opt/gnu-sed/libexec/gnubin/sed" ]]; then
