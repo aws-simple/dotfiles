@@ -11,11 +11,11 @@
 
 ### Requirements
 
-* For the just installed macOS `git` should be installed beforehand to be able to clone this repo
+For the just installed macOS `git` should be installed beforehand to be able to clone this repo
 
 ### Installation
 
-* To install (fresh) or upgrade (existing) macOS `dot files` configuration use the following steps
+To install (fresh) or upgrade (existing) macOS `dot files` configuration use the following steps
 
 1. Clone the repo into `$HOME/.dotfiles` directory
 
