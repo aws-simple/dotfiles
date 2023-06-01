@@ -23,6 +23,7 @@ brew 'gh'                   # GitHub command-line tool
 brew 'git'                  # Git - Distributed revision control system
 brew 'gnu-sed'              # GNU "sed": to use it add this to your .rc file: PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 brew 'goenv'                # Go version management
+brew 'gpg'                  # GNU Pretty Good Privacy (PGP) package
 brew 'graphviz'             # Graph visualization software from AT&T and Bell Labs
 brew 'grep'                 # GNU grep, egrep and fgre
 brew 'helm'                 # Kubernetes package manager, also known as: helm@3
