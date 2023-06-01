@@ -16,3 +16,5 @@ alias pass40="dd if=/dev/urandom bs=1 count=64 2>/dev/null | base64 | rev | cut 
 
 alias reloadshell="source $ZDOTDIR/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+
+alias av='aws-vault --backend=pass --pass-prefix=aws'
