@@ -1,6 +1,6 @@
 export ZSH="$ZDOTDIR/ohmyzsh"
 
-ZSH_CUSTOM=$ZDOTDIR
+ZSH_CUSTOM=$ZDOTDIR/custom
 ZSH_THEME="simple"
 
 HIST_STAMPS="yyyy-mm-dd"
@@ -10,6 +10,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  av
   git
   z
 )
