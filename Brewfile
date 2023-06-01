@@ -82,6 +82,7 @@ brew 'redis'
 
 # Apps
 cask '1password'
+cask 'aws-vault'
 cask 'caffeine'
 cask 'dbngin'
 cask 'discord'
