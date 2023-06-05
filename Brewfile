@@ -45,6 +45,7 @@ brew 'mas'                  # Mac App Store manager
 brew 'netcat'               # Utility for managing network connections
 brew 'nmap'                 # Port scanning utility for large networks
 brew 'oath-toolkit'         # Tools for one-time password authentication systems
+brew 'pandoc'               # Swiss-army knife of markup format conversion
 brew 'pass'                 # Password manager
 brew 'pass-otp'             # Pass extension for managing one-time-password tokens
 brew 'pipenv'               # Python dependency management tool
@@ -97,6 +98,7 @@ cask 'iterm2'
 cask 'keybase'
 cask 'meld'                     # Visual diff and merge tool
 cask 'microsoft-remote-desktop'
+cask 'opera'
 cask 'pastebot'
 cask 'peakhour'
 cask 'slack'
