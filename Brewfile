@@ -59,7 +59,8 @@ brew 'terraform-docs'       # Tool to generate documentation from Terraform modu
 brew 'terragrunt'           # Thin wrapper for Terraform e.g. for locking state
 brew 'tfenv'                # Terraform version manager inspired by rbenv
 brew 'tflint'               # Linter for Terraform files
-brew "tinyproxy"            # HTTP/HTTPS proxy for POSIX systems
+brew 'tinyproxy'            # HTTP/HTTPS proxy for POSIX systems
+brew 'werf'                 # Consistent delivery tool for Kubernetes
 brew 'yq'                   # Also known as: yq@4, process YAML documents from the CLI
 
 # Spatie Medialibrary
