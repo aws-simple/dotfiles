@@ -27,6 +27,7 @@ brew 'gpg'                  # GNU Pretty Good Privacy (PGP) package
 brew 'graphviz'             # Graph visualization software from AT&T and Bell Labs
 brew 'grep'                 # GNU grep, egrep and fgre
 brew 'helm'                 # Kubernetes package manager, also known as: helm@3
+brew 'helmfile'             # Deploy Kubernetes Helm Charts
 brew 'htop'                 # Improved top
 brew 'httpie'               # User-friendly cURL replacement (command-line HTTP client)
 brew 'jq'                   # Used for spatie/visit
