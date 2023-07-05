@@ -31,6 +31,7 @@ brew 'helmfile'             # Deploy Kubernetes Helm Charts
 brew 'htop'                 # Improved top
 brew 'httpie'               # User-friendly cURL replacement (command-line HTTP client)
 brew 'jq'                   # Used for spatie/visit
+brew 'k3d'                  # Little helper to run CNCF's k3s in Docker
 brew 'k9s'                  # Kubernetes CLI To Manage Your Clusters In Style!
 brew 'kube-linter'          # Static analysis tool for Kubernetes YAML files and Helm charts
 brew 'kube-ps1'             # Kubernetes prompt info for bash and zsh
