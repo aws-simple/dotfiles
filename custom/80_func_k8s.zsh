@@ -1,3 +1,25 @@
+# ktopcpu: 'kubectl top pod --sort-by=cpu' and filtered by nodes in node group which are selected with 1-st argument to alias, like 'ktopcpu purpose=workers'
+function ktopcpu {
+  if [[ -n $1 ]] ; then
+    kubectl top pods --no-headers -A --sort-by=cpu | \
+    grep -f <(kubectl get pod -A --no-headers -o wide | \
+    grep -f <(kubectl get nodes -l ${1} -oname | sed -e 's|^node/||') | awk '{print $2}')
+  else
+    kubectl top pods --no-headers -A --sort-by=cpu
+  fi
+}
+
+# ktopmem: 'kubectl top pod --sort-by=memory' and filtered by nodes in node group which are selected with 1-st argument to alias, like 'ktopmem purpose=workers'
+function ktopmem {
+  if [[ -n $1 ]] ; then
+    kubectl top pods --no-headers -A --sort-by=memory | \
+    grep -f <(kubectl get pod -A --no-headers -o wide | \
+    grep -f <(kubectl get nodes -l ${1} -oname | sed -e 's|^node/||') | awk '{print $2}')
+  else
+    kubectl top pods --no-headers -A --sort-by=memory
+  fi
+}
+
 # kubeall: all k8s objects namespaced in current namespace (or in all namespaces if invoked with '-A' key)
 function kubeall {
   local message="No resources found"
