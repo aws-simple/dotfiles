@@ -1,6 +1,7 @@
 # Taps
 tap 'homebrew/autoupdate'
 tap 'homebrew/bundle'
+tap 'homebrew/services'
 ### tap 'homebrew/cask'
 ### tap 'homebrew/cask-drivers'
 ### tap 'homebrew/cask-fonts'
