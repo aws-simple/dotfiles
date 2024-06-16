@@ -9,6 +9,7 @@ tap 'homebrew/bundle'
 tap "hashicorp/tap"
 
 # Binaries
+brew 'autossh'              # Automatically restart SSH sessions and tunnels
 brew 'awscli'               # Official Amazon AWS command-line interface, also known as: awscli@2
 brew 'bash'                 # Latest Bash version
 brew 'bat'                  # Used for spatie/visit
