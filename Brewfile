@@ -1,11 +1,11 @@
 # Taps
 tap 'homebrew/autoupdate'
 tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/cask-drivers'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap "homebrew/core"
+### tap 'homebrew/cask'
+### tap 'homebrew/cask-drivers'
+### tap 'homebrew/cask-fonts'
+### tap 'homebrew/cask-versions'
+### tap "homebrew/core"
 tap "hashicorp/tap"
 
 # Binaries
@@ -74,7 +74,7 @@ brew 'gifsicle'  # GIF image/animation creator/editor
 
 # Development PHP
 brew 'php'
-brew 'php@8.0'
+### brew 'php@8.0'
 brew 'composer'
 brew 'imagemagick'
 brew 'node'
@@ -112,7 +112,7 @@ cask 'transmit'
 cask 'tunnelbear'
 cask 'tunnelblick'
 cask 'tuple'
-cask 'vagrant'
+### cask 'vagrant'
 cask 'viber'
 cask 'virtualbox'
 cask 'visual-studio-code'
@@ -140,5 +140,7 @@ cask 'font-open-sans'
 cask 'font-roboto'
 cask 'font-source-code-pro'
 cask 'font-source-code-pro-for-powerline'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
+### cask 'font-source-sans-pro'
+### cask 'font-source-serif-pro'
+cask 'font-source-sans-3'
+cask 'font-source-serif-4'
