@@ -36,8 +36,10 @@ if test ! $(which brew); then
     exit -1
   fi
 
-  #echo 'eval "$(/usr/local/bin/brew shellenv)"' >> $HOME/.zprofile
-  (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> $ZDOTDIR/.zprofile
+  if test ! -e $ZDOTDIR/.zprofile ; then
+    (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') > $ZDOTDIR/.zprofile
+  fi
+
   eval "$(/usr/local/bin/brew shellenv)"
 
 fi
