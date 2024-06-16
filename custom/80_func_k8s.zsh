@@ -1,3 +1,14 @@
+# kselpod: 'kubectl get pod -A' and filtered by nodes with node labels selected with 1-st argument to alias, like 'kselpod purpose=workers'
+function kselpod {
+  if [[ -n $1 ]] ; then
+    kubectl get pod -A -o json | \
+    jq -r --argjson list $(kubectl get node -l ${1} -o json | jq '[.items[].metadata.name]' -c) \
+    '.items[] | select(.spec.nodeName == ($list[])) | [ .metadata.name, .metadata.namespace, .spec.nodeName] | @csv'
+  else
+    echo 'arg in a form of "-l" node filter is needed, like "kselpod purpose=workers"'
+  fi
+}
+
 # ktopcpu: 'kubectl top pod --sort-by=cpu' and filtered by nodes in node group which are selected with 1-st argument to alias, like 'ktopcpu purpose=workers'
 function ktopcpu {
   if [[ -n $1 ]] ; then

@@ -50,3 +50,5 @@ export http_proxy=http://127.0.0.1:$port
 export HTTP_PROXY=http://127.0.0.1:$port
 export https_proxy=http://127.0.0.1:$port
 export HTTPS_PROXY=http://127.0.0.1:$port
+export no_proxy=10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,127.0.0.0/8
+export NO_PROXY=10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,127.0.0.0/8
