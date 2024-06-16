@@ -14,7 +14,7 @@ echo "== log: setup OMZ: init"
 test ! -e $HOME/.zshenv   || mv $HOME/.zshenv   $SCRIPT_DIR/.bckp/$TS/
 test ! -e $HOME/.zsh      || mv $HOME/.zsh      $SCRIPT_DIR/.bckp/$TS/
 test ! -e $HOME/.zshrc    || mv $HOME/.zshrc    $SCRIPT_DIR/.bckp/$TS/
-#test ! -e $HOME/.zprofile || mv $HOME/.zprofile $SCRIPT_DIR/.bckp/$TS/
+test ! -e $HOME/.zprofile || mv $HOME/.zprofile $SCRIPT_DIR/.bckp/$TS/
 
 cat > $HOME/.zshenv << '_EOF'
 ZDOTDIR=$HOME/.zsh
@@ -36,8 +36,10 @@ if test ! $(which brew); then
     exit -1
   fi
 
-  echo 'eval "$(/usr/local/bin/brew shellenv)"' >> $HOME/.zprofile
+  #echo 'eval "$(/usr/local/bin/brew shellenv)"' >> $HOME/.zprofile
+  (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> $ZDOTDIR/.zprofile
   eval "$(/usr/local/bin/brew shellenv)"
+
 fi
 
 brew update
