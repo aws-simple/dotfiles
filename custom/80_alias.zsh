@@ -25,3 +25,5 @@ alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
 alias kxl='f() { kubectl config get-contexts --no-headers -o name ; } ; f'
 alias knl='f() { kubectl get ns -o jsonpath='\''{range .items[*].metadata}{.name}{"\n"}{end}'\'' ; } ; f'
+
+alias myip='curl https://checkip.amazonaws.com'

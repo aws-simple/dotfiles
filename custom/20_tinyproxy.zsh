@@ -53,6 +53,11 @@ export HTTPS_PROXY=http://127.0.0.1:${PORT_TINY}
 export no_proxy=10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,127.0.0.0/8
 export NO_PROXY=10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,127.0.0.0/8
 
+alias proxyoff='unset http_proxy; unset HTTP_PROXY; unset https_proxy; unset HTTPS_PROXY; unset no_proxy; unset NO_PROXY'
+alias     poff='unset http_proxy; unset HTTP_PROXY; unset https_proxy; unset HTTPS_PROXY; unset no_proxy; unset NO_PROXY'
+alias  unproxy='unset http_proxy; unset HTTP_PROXY; unset https_proxy; unset HTTPS_PROXY; unset no_proxy; unset NO_PROXY'
+alias      unp='unset http_proxy; unset HTTP_PROXY; unset https_proxy; unset HTTPS_PROXY; unset no_proxy; unset NO_PROXY'
+
 if (( ! $+commands[autossh] )); then
   return
 fi
@@ -67,6 +72,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 alias ash='f_ash() { if [[ -n $1 ]] ; then test "$1" = "kill" && kill $(ps aux | grep autossh | grep -v grep | awk "{print \$2}") || autossh -f -M 0 $1 -xCNT -D \${PORT_SSH} -o ServerAliveInterval=10 -o ServerAliveCountMax=1 -o ExitOnForwardFailure=yes -o StrictHostKeyChecking=accept-new ; else ps aux | grep autossh | grep -v grep ; fi ; } ; f_ash'
+
 
 ### 'tinyproxy.conf' example content
 #   User nobody
