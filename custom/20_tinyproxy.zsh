@@ -71,7 +71,7 @@ if [[ $? -ne 0 ]]; then
     -o StrictHostKeyChecking=accept-new
 fi
 
-alias ash='f_ash() { if [[ -n $1 ]] ; then test "$1" = "kill" && kill $(ps aux | grep autossh | grep -v grep | awk "{print \$2}") || autossh -f -M 0 $1 -xCNT -D \${PORT_SSH} -o ServerAliveInterval=10 -o ServerAliveCountMax=1 -o ExitOnForwardFailure=yes -o StrictHostKeyChecking=accept-new ; else ps aux | grep autossh | grep -v grep ; fi ; } ; f_ash'
+alias ash='f_ash() { if [[ -n $1 ]] ; then test "$1" = "kill" && kill $(ps aux | grep autossh | grep -v grep | awk "{print \$2}") || autossh -f -M 0 $1 -xCNT -D ${PORT_SSH} -o ServerAliveInterval=10 -o ServerAliveCountMax=1 -o ExitOnForwardFailure=yes -o StrictHostKeyChecking=accept-new ; else ps aux | grep autossh | grep -v grep ; fi ; } ; f_ash'
 
 
 ### 'tinyproxy.conf' example content
