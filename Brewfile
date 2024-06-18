@@ -2,12 +2,6 @@
 tap 'homebrew/autoupdate'
 tap 'homebrew/bundle'
 tap 'homebrew/services'
-### tap 'homebrew/cask'
-### tap 'homebrew/cask-drivers'
-### tap 'homebrew/cask-fonts'
-### tap 'homebrew/cask-versions'
-### tap "homebrew/core"
-tap "hashicorp/tap"
 
 # Binaries
 brew 'autossh'              # Automatically restart SSH sessions and tunnels
@@ -74,9 +68,8 @@ brew 'pngquant'  # PNG image optimizing utility
 brew 'svgo'      # Nodejs-based tool for optimizing SVG vector graphics files
 brew 'gifsicle'  # GIF image/animation creator/editor
 
-# Development PHP
+# Development: PHP, Node
 brew 'php'
-### brew 'php@8.0'
 brew 'composer'
 brew 'imagemagick'
 brew 'node'
@@ -90,6 +83,7 @@ brew 'redis'
 cask '1password'
 cask 'aws-vault'
 cask 'caffeine'
+cask 'dbeaver-community'
 cask 'dbngin'
 cask 'discord'
 cask 'docker'
@@ -114,7 +108,6 @@ cask 'transmit'
 cask 'tunnelbear'
 cask 'tunnelblick'
 cask 'tuple'
-### cask 'vagrant'
 cask 'viber'
 cask 'virtualbox'
 cask 'visual-studio-code'
@@ -122,15 +115,16 @@ cask 'vnc-viewer'
 cask 'webstorm'
 cask 'zoom'
 
-### ###cask 'figma'
-### ###cask 'imageoptim'
-### ###cask 'phpmon'
-### ###cask 'ray'
-### ###cask 'readdle-spark'
-### ###cask 'screenflow'
-### ###cask 'tinkerwell'
-### ###cask 'whatsapp'
-### ###cask 'zwift'
+### # Something probably unnecessary
+### cask 'figma'
+### cask 'imageoptim'
+### cask 'phpmon'
+### cask 'ray'
+### cask 'readdle-spark'
+### cask 'screenflow'
+### cask 'tinkerwell'
+### cask 'whatsapp'
+### cask 'zwift'
 
 # Quicklook
 cask 'qlmarkdown'
@@ -142,7 +136,9 @@ cask 'font-open-sans'
 cask 'font-roboto'
 cask 'font-source-code-pro'
 cask 'font-source-code-pro-for-powerline'
-### cask 'font-source-sans-pro'
-### cask 'font-source-serif-pro'
 cask 'font-source-sans-3'
 cask 'font-source-serif-4'
+
+### # ### For manual ./install.sh
+### tap "hashicorp/tap"
+### cask 'vagrant'
