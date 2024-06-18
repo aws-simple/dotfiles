@@ -63,7 +63,7 @@ if (( ! $+commands[autossh] )); then
 fi
 
 grep -q "^Host tunnel" ~/.ssh/config >& /dev/null
-if [[ $? -ne 0 ]]; then
+if [[ $? -eq 0 ]]; then
   autossh -f -M 0 tunnel -xCNT -D ${PORT_SSH} \
     -o ServerAliveInterval=10 \
     -o ServerAliveCountMax=1 \
@@ -72,7 +72,6 @@ if [[ $? -ne 0 ]]; then
 fi
 
 alias ash='f_ash() { if [[ -n $1 ]] ; then test "$1" = "kill" && kill $(ps aux | grep autossh | grep -v grep | awk "{print \$2}") || autossh -f -M 0 $1 -xCNT -D ${PORT_SSH} -o ServerAliveInterval=10 -o ServerAliveCountMax=1 -o ExitOnForwardFailure=yes -o StrictHostKeyChecking=accept-new ; else ps aux | grep autossh | grep -v grep ; fi ; } ; f_ash'
-
 
 ### 'tinyproxy.conf' example content
 #   User nobody
