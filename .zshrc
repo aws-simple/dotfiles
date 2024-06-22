@@ -12,6 +12,7 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
   av
   git
+  terraform
   z
 )
 
