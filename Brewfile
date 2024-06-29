@@ -126,9 +126,9 @@ cask 'zoom'
 ### cask 'whatsapp'
 ### cask 'zwift'
 
-# Quicklook
-cask 'qlmarkdown'
-cask 'quicklook-json'
+### # Quicklook / macos complains for not being able to verify if this is not malicsious software
+### cask 'qlmarkdown'
+### cask 'quicklook-json'
 
 # Fonts
 cask 'font-lato'
