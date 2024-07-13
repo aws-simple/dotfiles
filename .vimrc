@@ -1,4 +1,5 @@
 " see https://www.manniwood.com/2016_04_09/vimrc.html
+" see https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/
 
 filetype on
 filetype plugin on
