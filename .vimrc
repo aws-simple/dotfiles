@@ -1,3 +1,5 @@
+" see https://www.manniwood.com/2016_04_09/vimrc.html
+
 filetype on
 filetype plugin on
 
