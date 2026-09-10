@@ -1,12 +1,38 @@
 # kselpod: 'kubectl get pod -A' and filtered by nodes with node labels selected with 1-st argument to alias, like 'kselpod purpose=workers'
-function kselpod {
-  if [[ -n $1 ]] ; then
-    kubectl get pod -A -o json | \
-    jq -r --argjson list $(kubectl get node -l ${1} -o json | jq '[.items[].metadata.name]' -c) \
-    '.items[] | select(.spec.nodeName == ($list[])) | [ .metadata.name, .metadata.namespace, .spec.nodeName] | @csv'
+function kselpod() {
+  local input=${1}
+  if [[ -n "${input}" ]] ; then
+    local output
+    local filter="${input}"
+
+    [[ "${input}" =~ "=" ]] || filter="eks.amazonaws.com/nodegroup=${input}"
+    output=$(func_get_pods_filtered_by_nodes ${filter})
+    test -z "${output}" || { func_log "${filter}"; echo "${output}" ; return ; }
+
+    [[ ! "${input}" =~ "=" ]] || return
+    filter="karpenter.sh/nodepool=${input}"
+    output=$(func_get_pods_filtered_by_nodes ${filter})
+    test -z "${output}" || { func_log "${filter}"; echo "${output}" ; return ; }
   else
     echo 'arg in a form of "-l" node filter is needed, like "kselpod purpose=workers"'
   fi
+}
+
+function func_get_pods_filtered_by_nodes() {
+  test -n "${1}" || return
+  kubectl get pod -A -o json | \
+    jq -r --argjson list $(kubectl get node -l ${1} -o json | jq '[.items[].metadata.name]' -c) \
+    '.items[] | select(.spec.nodeName == ($list[])) | [ .metadata.name, .metadata.namespace, .spec.nodeName] | @csv'
+}
+
+function func_deb() {
+  echo "[DEB] ==>"
+  echo "$@"
+  echo "[DEB] <=="
+}
+
+function func_log() {
+  echo "[LOG]: $@"
 }
 
 # ktopcpu: 'kubectl top pod --sort-by=cpu' and filtered by nodes in node group which are selected with 1-st argument to alias, like 'ktopcpu purpose=workers'
@@ -86,14 +112,14 @@ function kubepods {
       sort -k8b,8 -k1,1 -s | \
       awk 'BEGIN {stor=$8} {if(stor != $8){print ""} print $0; stor=$8}' | \
       sed -e 's/<none>//g' -e 's/[ ]\+$//' | \
-      column -te
+      column -t
   else
     kubectl get pods    -o wide --no-headers | \
       grep -v "Completed" | \
       sort -k7b,7 -k1,1 -s | \
       awk 'BEGIN {stor=$7} {if(stor != $7){print ""} print $0; stor=$7}' | \
       sed -e 's/<none>//g' -e 's/[ ]\+$//' | \
-      column -te
+      column -t
   fi
 }
 

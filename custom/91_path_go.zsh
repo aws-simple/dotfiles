@@ -1,3 +1,5 @@
+export GOPATH=$(go env GOPATH)
+
 if (( ! $+commands[goenv] )); then
   return
 fi
